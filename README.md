@@ -1,1 +1,1 @@
-## Work in progress expense tracker
+# Expense Tracker
