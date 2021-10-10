@@ -1,6 +1,7 @@
 import Expenses from './components/Expenses/Expenses';
+import NewExpense from './components/NewExpense/NewExpense';
 
-function App() {
+const App = () => {
   //Dummy Data
   const expenses = [
     {
@@ -26,9 +27,10 @@ function App() {
 
   return (
     <div>
+      <NewExpense />
       <Expenses expenses={expenses} />
     </div>
   );
-}
+};
 
 export default App;
