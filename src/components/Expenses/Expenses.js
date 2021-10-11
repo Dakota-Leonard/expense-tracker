@@ -6,7 +6,9 @@ import './Expenses.css';
 
 const Expenses = props => {
   const expenses = props.expenses;
-  const [filterYear, setFilterYear] = useState(new Date().getFullYear());
+  const [filterYear, setFilterYear] = useState(
+    new Date().getFullYear().toString()
+  );
 
   const onFilterExpense = filterCriteria => {
     setFilterYear(filterCriteria);
@@ -15,15 +17,18 @@ const Expenses = props => {
   return (
     <Card className="expenses">
       <ExpensesFilter selected={filterYear} onFilterExpense={onFilterExpense} />
-      {expenses.map(item => {
-        return (
-          <ExpenseItem
-            key={item.id}
-            title={item.title}
-            amount={item.amount}
-            date={item.date}
-          />
-        );
+      {expenses
+        .filter(item => item.date.getFullYear().toString() === filterYear)
+        .map(item => {
+          return (
+            <ExpenseItem
+              key={item.id}
+              title={item.title}
+              amount={item.amount}
+              date={item.date}
+            />
+          );
+        })}
       })}
     </Card>
   );
