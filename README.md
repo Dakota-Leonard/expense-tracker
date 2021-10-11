@@ -1,3 +1,11 @@
 # Expense Tracker
 
-This is a modular expense tracker built using React. This is currently a work in progress.
+This is a modular expense tracker built using React. This is a work in progress and currently it displays dummy data for initial state.
+
+## To View
+
+1. Fork/clone as you wish
+2. `npm install` in the directory you cloned it to.
+3. `npm start` to start up a local server and view the project.
+
+- If your browser doesn't automatically open upon doing `npm start` then you can navigate to [localhost:3000](http://localhost:3000/) manually.
