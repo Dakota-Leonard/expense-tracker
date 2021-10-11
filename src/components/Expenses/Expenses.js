@@ -29,7 +29,6 @@ const Expenses = props => {
             />
           );
         })}
-      })}
     </Card>
   );
 };
