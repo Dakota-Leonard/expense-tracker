@@ -13,19 +13,28 @@ const NewExpense = props => {
       id: Math.random().toString(),
     };
     props.onAddExpense(formData);
-    setIsEditing(!isEditing);
+    setIsEditing(false);
   };
 
-  const addExpenseClickHander = prevData => {
-    setIsEditing(!isEditing);
+  const addExpenseClickHandler = prevData => {
+    setIsEditing(true);
+  };
+
+  const cancelEditingClickHandler = () => {
+    setIsEditing(false);
   };
 
   return (
     <div className="new-expense">
       {!isEditing && (
-        <button onClick={addExpenseClickHander}>Add New Expense</button>
+        <button onClick={addExpenseClickHandler}>Add New Expense</button>
       )}
-      {isEditing && <ExpenseForm onUserFormSubmit={userFormSubmitHandler} />}
+      {isEditing && (
+        <ExpenseForm
+          onUserFormSubmit={userFormSubmitHandler}
+          cancelEditing={cancelEditingClickHandler}
+        />
+      )}
     </div>
   );
 };
