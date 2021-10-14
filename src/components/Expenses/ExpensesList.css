@@ -3,7 +3,7 @@
   padding: 0;
 }
 
-.expenses-list_fallback {
+.expenses-list__fallback {
   color: white;
   text-align: center;
 }

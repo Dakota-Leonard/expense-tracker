@@ -58,8 +58,8 @@ const ExpenseForm = props => {
 
   return (
     <form onSubmit={submitHandler}>
-      <div className="new-expense_controls">
-        <div className="new-expense_control">
+      <div className="new-expense__controls">
+        <div className="new-expense__control">
           <label>Title</label>
           <input
             type="text"
@@ -68,7 +68,7 @@ const ExpenseForm = props => {
           />
         </div>
 
-        <div className="new-expense_control">
+        <div className="new-expense__control">
           <label>Amount</label>
           <input
             type="number"
@@ -79,7 +79,7 @@ const ExpenseForm = props => {
           />
         </div>
 
-        <div className="new-expense_control">
+        <div className="new-expense__control">
           <label>Date</label>
           <input
             type="date"
@@ -88,7 +88,7 @@ const ExpenseForm = props => {
           />
         </div>
       </div>
-      <div className="new-expense_actions">
+      <div className="new-expense__actions">
         <button type="button" onClick={props.cancelEditing}>
           Cancel
         </button>

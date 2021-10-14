@@ -3,7 +3,7 @@ import ExpenseItem from './ExpenseItem';
 
 const ExpensesList = props => {
   if (!props.items.length) {
-    return <h2 className="expenses-list_fallback">No expenses found.</h2>;
+    return <h2 className="expenses-list__fallback">No expenses found.</h2>;
   }
 
   return (
