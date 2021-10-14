@@ -1,7 +1,6 @@
 # Expense Tracker
 
-This is a modular expense tracker built using React. This is a work in progress and currently it displays dummy data for initial state.
-
+This is a modular expense tracker built using React.
 ## To View
 
 1. Fork/clone as you wish
